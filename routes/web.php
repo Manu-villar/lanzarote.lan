@@ -21,3 +21,7 @@ Route::get('/formulario', function(){
 });
 
 Route::post('/procesar-datos',[DatosController::class, 'procesar']);
+
+Route::get('/formulario-libro', function(){
+    return view('formulario-libro');
+});
