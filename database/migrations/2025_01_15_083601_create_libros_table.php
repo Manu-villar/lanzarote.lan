@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('Autor');
-            $table->year('anho');
+            $table->integer('anho');
             $table->enum('genero', ['salud', 'politica', 'ciencia-ficcion','fantasia']);
             $table->rememberToken();
             $table->timestamps();

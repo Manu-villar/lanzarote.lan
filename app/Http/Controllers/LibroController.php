@@ -51,4 +51,23 @@ class LibroController extends Controller
        
     }
 
+    function eliminarLibro($id)
+    {
+        $libro = Libro::find($id);
+        $libro->delete();
+        return view('eliminado');
+    }
+
+    function mostratDatos($id)
+    {
+        $libro = Libro::find($id);
+        return view('actualizar', compact('libro'));
+    }
+    function actualizarLibro($id)
+    {
+        $libro = Libro::find($id);
+        $libro->save();
+        return view('actualizado');
+    }
 }
+

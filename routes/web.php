@@ -31,4 +31,9 @@ Route::post('/procesar-libros',[LibroController::class, 'insertarLibro']);
 Route::post('/procesar-datos',[DatosController::class, 'procesar']);
 
 Route::get('/ver-libros',[LibroController::class, 'verLibros']);
+Route::get('/ver-libros',[LibroController::class, 'verLibros']);
+
+Route::get('/eliminar-libro/{id}',[LibroController::class, 'eliminarLibro']);
+Route::get('/actualizar-libro/{id}',[LibroController::class, 'mostratDatos']);
+Route::post('/actualizar-libro/{id}',[LibroController::class, 'actualizarLibro']);
 
