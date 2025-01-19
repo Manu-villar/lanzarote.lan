@@ -37,7 +37,6 @@ class LibroController extends Controller
         else
         {
             $libros = new Libro();
-            $libros->create($data);
             $libros = Libro::all();
             return view('ver-libros', ['libros'=>$libros]);
         }
@@ -51,23 +50,7 @@ class LibroController extends Controller
        
     }
 
-    function eliminarLibro($id)
-    {
-        $libro = Libro::find($id);
-        $libro->delete();
-        return view('eliminado');
-    }
+    
 
-    function mostratDatos($id)
-    {
-        $libro = Libro::find($id);
-        return view('actualizar', compact('libro'));
-    }
-    function actualizarLibro($id)
-    {
-        $libro = Libro::find($id);
-        $libro->save();
-        return view('actualizado');
-    }
+
 }
-
